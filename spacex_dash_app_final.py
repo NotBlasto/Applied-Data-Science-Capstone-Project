@@ -57,7 +57,7 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
 
 def build_pie_chart(site_dropdown):
     if site_dropdown == 'ALL':
-        piechart = px.pie(spacex_df, names = 'Launch Site', values = 'class', title = 'Total Launches For Each Site')
+        piechart = px.pie(spacex_df, names = 'Launch Site', values = 'class', title = 'Success Rate Of Launches For All Sites')
         return piechart
     else:
         dropdown_df = spacex_df[spacex_df['Launch Site'] == site_dropdown]
